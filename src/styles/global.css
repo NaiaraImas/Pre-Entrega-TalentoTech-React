@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+:root{
+  --bg: #fbf9f4;
+  --nav: #0b0b0b;
+  --accent: #d6a94a;
+  --text: #262626;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: 'Cinzel', serif;
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  min-height:100vh;
+}
+
+.navbar{
+  background: var(--nav);
+  color: white;
+  padding: 1rem 2rem;
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+
+.nav-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.nav-inner .brand{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:700;
+  font-size:1.25rem;
+}
+
+.nav-inner .links a{
+  color:white;
+  margin-left:1rem;
+  text-decoration:none;
+}
+
+.app-container{
+  max-width:1100px;
+  margin:2rem auto;
+  padding:1rem;
+}
+
+/* Items grid */
+.items-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap:1.25rem;
+  margin-top:1rem;
+}
+
+.item-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,245,230,0.9));
+  border: 2px solid rgba(214,169,74,0.25);
+  padding:1rem;
+  border-radius:12px;
+  text-align:center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.item-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+.item-card h3{ margin:0.5rem 0; font-size:1.05rem}
+.price{ font-weight:700; color:var(--nav) }
+.actions button{
+  background: linear-gradient(180deg, var(--accent), #b88f3a);
+  border:none;
+  padding:0.6rem 1rem;
+  border-radius:8px;
+  color:white;
+  cursor:pointer;
+  font-weight:700;
+}
+
+.footer{
+  text-align:center;
+  padding:1.5rem;
+  margin-top:2rem;
+  color:#6b6b6b;
+}
