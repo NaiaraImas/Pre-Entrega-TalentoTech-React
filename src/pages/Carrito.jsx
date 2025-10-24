@@ -3,6 +3,20 @@ import { useCart } from "../context/CartContext";
 import CheckoutForm from "../components/Checkoutform";
 
 export default function Carrito() {
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+if (!isLoggedIn) {
+  return (
+    <section style={{ padding: "2rem" }}>
+      <h2>Debes iniciar sesión para finalizar la compra</h2>
+      <a href="/login" style={{ color: "blue", textDecoration: "underline" }}>
+        Ir a iniciar sesión
+      </a>
+    </section>
+  );
+}
+
   const { cartItems, addToCart, removeItem, clearCart } = useCart();
   const [showForm, setShowForm] = useState(false);
 
